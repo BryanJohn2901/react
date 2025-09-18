@@ -1,8 +1,12 @@
-const Heading = () => {
+import styles from './Heading.module.css'
+
+type HeadingProps = {
+  children: React.ReactNode
+}
+
+const Heading = ({ children }: HeadingProps) => {
   return (
-    <>
-        <h1 className="heading">Olá mundo</h1>
-    </>
+    <h1 className={styles.heading}>{children}</h1>
   )
 }
 
